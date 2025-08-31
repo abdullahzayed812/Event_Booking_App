@@ -1,4 +1,8 @@
 {
   "name": "EventBookingApp",
-  "displayName": "EventBookingApp"
+  "displayName": "Event Booking App",
+  "react-native": {
+    "android_package": "com.eventbookingapp",
+    "project_name": "EventBookingApp"
+  }
 }

@@ -1,0 +1,97 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "React Native Conference 2025",
+      "date": "2025-09-15",
+      "time": "09:00 AM",
+      "location": "San Francisco Convention Center",
+      "description": "Join the largest React Native conference of the year! Learn from industry experts, network with fellow developers, and discover the latest trends in mobile development. This full-day event features workshops, keynotes, and hands-on sessions.",
+      "speakers": ["Dan Abramov", "Sophie Alpert", "Sebastian Markbage"],
+      "price": 299,
+      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=400&fit=crop",
+      "capacity": 500,
+      "availableSpots": 125
+    },
+    {
+      "id": "2",
+      "title": "TypeScript Workshop",
+      "date": "2025-09-10",
+      "time": "02:00 PM",
+      "location": "Tech Hub Downtown",
+      "description": "Master TypeScript in this intensive hands-on workshop. Perfect for developers looking to enhance their JavaScript skills with static typing. Learn advanced patterns, best practices, and real-world applications.",
+      "speakers": ["Anders Hejlsberg", "Ryan Cavanaugh"],
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=400&fit=crop",
+      "capacity": 50,
+      "availableSpots": 15
+    },
+    {
+      "id": "3",
+      "title": "Mobile UX Design Meetup",
+      "date": "2025-09-20",
+      "time": "06:30 PM",
+      "location": "Design Studio Co-working Space",
+      "description": "Explore the latest trends in mobile user experience design. Network with designers, developers, and product managers while discussing best practices for creating intuitive mobile interfaces.",
+      "speakers": ["Jenny Chang", "Alex Rodriguez"],
+      "price": 0,
+      "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=400&fit=crop",
+      "capacity": 80,
+      "availableSpots": 45
+    },
+    {
+      "id": "4",
+      "title": "Startup Pitch Night",
+      "date": "2025-09-25",
+      "time": "07:00 PM",
+      "location": "Innovation Hub",
+      "description": "Watch promising startups pitch their ideas to a panel of investors and industry experts. Network with entrepreneurs, investors, and fellow innovators in the startup ecosystem.",
+      "speakers": ["Mark Cuban", "Barbara Corcoran", "Kevin O'Leary"],
+      "price": 75,
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop",
+      "capacity": 200,
+      "availableSpots": 89
+    },
+    {
+      "id": "5",
+      "title": "AI & Machine Learning Summit",
+      "date": "2025-10-05",
+      "time": "09:30 AM",
+      "location": "University Conference Hall",
+      "description": "Dive deep into the world of artificial intelligence and machine learning. Learn about the latest algorithms, tools, and applications from leading researchers and industry practitioners.",
+      "speakers": ["Andrew Ng", "Fei-Fei Li", "Yann LeCun"],
+      "price": 450,
+      "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=400&fit=crop",
+      "capacity": 300,
+      "availableSpots": 156
+    },
+    {
+      "id": "6",
+      "title": "Open Source Community Day",
+      "date": "2025-09-30",
+      "time": "10:00 AM",
+      "location": "Community Center",
+      "description": "Celebrate open source software with fellow developers and contributors. Participate in code sprints, learn about new projects, and discover how to contribute to the open source community.",
+      "speakers": ["Linus Torvalds", "Mitchell Hashimoto"],
+      "price": 0,
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop",
+      "capacity": 150,
+      "availableSpots": 67
+    }
+  ],
+  "users": [
+    {
+      "id": "user1",
+      "name": "john",
+      "email": "j",
+      "password": "j"
+    },
+    {
+      "id": "user2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "password123"
+    }
+  ],
+  "registrations": []
+}

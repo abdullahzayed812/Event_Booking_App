@@ -1,97 +1,206 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Event Booking App
 
-# Getting Started
+A React Native application for browsing and registering for events, built with TypeScript, Redux Toolkit, and React Navigation.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- **User Authentication**: Sign up and login functionality
+- **Event Browsing**: View a list of available events with details
+- **Event Registration**: Register for events with real-time availability tracking
+- **User Dashboard**: View registered events and manage bookings
+- **State Management**: Redux Toolkit with RTK Query for efficient data fetching
+- **Navigation**: Bottom tab navigation with stack navigation for details
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Tech Stack
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native 0.72.6
+- TypeScript
+- Redux Toolkit & RTK Query
+- React Navigation 6
+- React Native Vector Icons
+- Mock API with JSON data source
 
-```sh
-# Using npm
-npm start
+## Prerequisites
 
-# OR using Yarn
-yarn start
-```
+- Node.js (>= 16.x)
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development - macOS only)
 
-## Step 2: Build and run your app
+## Installation
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+1. **Clone the repository**
+
+   ```bash
+   git clone <your-repo-url>
+   cd EventBookingApp
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **iOS Setup** (macOS only)
+
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Android Setup**
+   - Ensure Android Studio is installed
+   - Set up Android SDK and emulator
+
+## Running the App
 
 ### Android
 
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+```bash
 npm run ios
-
-# OR using Yarn
+# or
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Metro Bundler
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+npm start
+# or
+yarn start
+```
 
-## Step 3: Modify your app
+## Project Structure
 
-Now that you have successfully run the app, let's make changes!
+```
+src/
+├── data/
+│   └── mockData.json          # Sample event and user data
+├── navigation/
+│   └── AppNavigator.tsx       # Navigation configuration
+├── screens/
+│   ├── auth/
+│   │   ├── LoginScreen.tsx    # Login screen
+│   │   └── SignUpScreen.tsx   # Sign up screen
+│   ├── events/
+│   │   ├── EventListScreen.tsx    # Event listing
+│   │   └── EventDetailScreen.tsx  # Event details and registration
+│   └── dashboard/
+│       └── DashboardScreen.tsx    # User dashboard
+├── services/
+│   └── mockApiService.ts      # Mock API implementation
+└── store/
+    ├── api/
+    │   └── apiSlice.ts        # RTK Query API definitions
+    ├── slices/
+    │   ├── authSlice.ts       # Authentication state
+    │   └── eventSlice.ts      # Event state
+    └── store.ts               # Redux store configuration
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Demo Credentials
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+For testing the app, you can use these demo credentials:
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+**Email**: john@example.com  
+**Password**: password123
 
-## Congratulations! :tada:
+Or create a new account using the sign-up screen.
 
-You've successfully run and modified your React Native App. :partying_face:
+## App Features
 
-### Now what?
+### Authentication
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- Secure login and registration
+- Form validation
+- Error handling for invalid credentials
+- Persistent authentication state
 
-# Troubleshooting
+### Event Management
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- Browse events with images, dates, and pricing
+- View detailed event information including:
+  - Event name, date, and time
+  - Location and description
+  - Speaker information
+  - Pricing and availability
+  - Registration capacity
+- Real-time availability tracking
+- Event registration with immediate feedback
 
-# Learn More
+### User Dashboard
 
-To learn more about React Native, take a look at the following resources:
+- View all registered events
+- Quick access to event details
+- Logout functionality
+- Clean, intuitive interface
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Mock API
+
+The app uses a mock API service that simulates real backend functionality:
+
+- **Data Source**: JSON file with sample events, users, and registrations
+- **Simulated Delays**: Network delays for realistic user experience
+- **Error Handling**: Proper error responses for various scenarios
+- **State Persistence**: In-memory data persistence during app session
+
+## Customization
+
+### Adding Real API
+
+To connect to a real API, update the `apiSlice.ts` file:
+
+1. Replace `fakeBaseQuery()` with `fetchBaseQuery({ baseUrl: 'YOUR_API_URL' })`
+2. Update the endpoint configurations to use `query` instead of `queryFn`
+3. Remove the mock service imports
+
+### Styling
+
+The app uses a clean, modern design with:
+
+- Consistent color scheme (#007AFF primary, #28a745 success)
+- Card-based layouts for better readability
+- Responsive design for various screen sizes
+- Material Design icons
+
+## Error Handling
+
+The app includes comprehensive error handling:
+
+- Network request failures
+- Authentication errors
+- Registration conflicts
+- Empty states and loading indicators
+- User-friendly error messages
+
+## Future Enhancements
+
+- Push notifications for event reminders
+- Event search and filtering
+- User profile management
+- Event reviews and ratings
+- Social sharing features
+- Calendar integration
+- Offline support
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
