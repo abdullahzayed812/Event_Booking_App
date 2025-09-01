@@ -39,8 +39,6 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
     try {
       const result = await login({ email, password });
 
-      console.log(result);
-
       if (result.data)
         dispatch(
           setCredentials({

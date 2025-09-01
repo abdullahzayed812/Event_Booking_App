@@ -3,14 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useSelector } from 'react-redux';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
 import { RootState } from '../store/store';
 import LoginScreen from '../screens/auth/LoginScreen';
 import SignUpScreen from '../screens/auth/SignUpScreen';
 import EventListScreen from '../screens/events/EventListScreen';
 import EventDetailScreen from '../screens/events/EventDetailScreen';
 import DashboardScreen from '../screens/dashboard/DashboardScreen';
+import Icon, { IconName } from '../components/Icon';
 
 export type RootStackParamList = {
   Login: undefined;
@@ -33,15 +32,15 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         // eslint-disable-next-line react/no-unstable-nested-components
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName: string;
+        tabBarIcon: ({ color, size }) => {
+          let iconName: IconName;
 
           if (route.name === 'Events') {
-            iconName = focused ? 'event' : 'event';
+            iconName = 'CalendarPlus';
           } else if (route.name === 'Dashboard') {
-            iconName = focused ? 'dashboard' : 'dashboard';
+            iconName = 'LayoutDashboard';
           } else {
-            iconName = 'help';
+            iconName = 'HandHelping';
           }
 
           return <Icon name={iconName} size={size} color={color} />;

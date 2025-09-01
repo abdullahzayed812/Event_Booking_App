@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   useGetEventByIdQuery,
   useRegisterForEventMutation,
@@ -19,6 +18,7 @@ import {
 import { addRegisteredEvent } from '../../store/slices/eventSlice';
 import { RootState } from '../../store/store';
 import { RootStackParamList } from '../../navigation/AppNavigator';
+import Icon from '../../components/Icon';
 
 type EventDetailRouteProp = RouteProp<RootStackParamList, 'EventDetail'>;
 
@@ -81,26 +81,26 @@ const EventDetailScreen = () => {
 
         <View style={styles.infoSection}>
           <View style={styles.infoRow}>
-            <Icon name="event" size={20} color="#007AFF" />
+            <Icon name="CalendarPlus" size={20} color="#007AFF" />
             <Text style={styles.infoText}>
               {new Date(event.date).toLocaleDateString()} at {event.time}
             </Text>
           </View>
 
           <View style={styles.infoRow}>
-            <Icon name="location-on" size={20} color="#007AFF" />
+            <Icon name="MapPin" size={20} color="#007AFF" />
             <Text style={styles.infoText}>{event.location}</Text>
           </View>
 
           <View style={styles.infoRow}>
-            <Icon name="attach-money" size={20} color="#007AFF" />
+            <Icon name="Banknote" size={20} color="#007AFF" />
             <Text style={styles.infoText}>
               {event.price === 0 ? 'Free' : `$${event.price}`}
             </Text>
           </View>
 
           <View style={styles.infoRow}>
-            <Icon name="people" size={20} color="#007AFF" />
+            <Icon name="Users" size={20} color="#007AFF" />
             <Text style={styles.infoText}>
               {event.availableSpots} of {event.capacity} spots available
             </Text>
@@ -117,7 +117,7 @@ const EventDetailScreen = () => {
             <Text style={styles.sectionTitle}>Speakers</Text>
             {event.speakers.map((speaker, index) => (
               <View key={index} style={styles.speakerItem}>
-                <Icon name="person" size={18} color="#666" />
+                <Icon name="User" size={18} color="#666" />
                 <Text style={styles.speakerName}>{speaker}</Text>
               </View>
             ))}

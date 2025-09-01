@@ -11,7 +11,6 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   useGetUserRegistrationsQuery,
   useGetEventsQuery,
@@ -20,6 +19,7 @@ import {
 import { logout } from '../../store/slices/authSlice';
 import { RootState } from '../../store/store';
 import { RootStackParamList } from '../../navigation/AppNavigator';
+import Icon from '../../components/Icon';
 
 type DashboardNavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -77,7 +77,7 @@ const DashboardScreen = () => {
           <Text style={styles.userName}>{user?.name}</Text>
         </View>
         <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-          <Icon name="logout" size={24} color="#007AFF" />
+          <Icon name="LogOut" size={24} color="#007AFF" />
         </TouchableOpacity>
       </View>
 
@@ -91,7 +91,7 @@ const DashboardScreen = () => {
           </View>
         ) : registeredEvents.length === 0 ? (
           <View style={styles.emptyContainer}>
-            <Icon name="event" size={64} color="#ccc" />
+            <Icon name="CalendarPlus" size={64} color="#ccc" />
             <Text style={styles.emptyTitle}>No Events Yet</Text>
             <Text style={styles.emptySubtitle}>
               Browse events and register to see them here
