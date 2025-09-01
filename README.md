@@ -13,16 +13,16 @@ A React Native application for browsing and registering for events, built with T
 
 ## Tech Stack
 
-- React Native 0.72.6
-- TypeScript
-- Redux Toolkit & RTK Query
-- React Navigation 6
-- React Native Vector Icons
+- React Native 0.81.1
+- TypeScript 5.8.3
+- Redux Toolkit & RTK Query 2.8.2
+- React Navigation 7
+- Lucide React Native 0.542.0
 - Mock API with JSON data source
 
 ## Prerequisites
 
-- Node.js (>= 16.x)
+- Node.js (>= 20.x)
 - React Native CLI
 - Android Studio (for Android development)
 - Xcode (for iOS development - macOS only)
@@ -32,7 +32,7 @@ A React Native application for browsing and registering for events, built with T
 1. **Clone the repository**
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/abdullahzayed812/Event_Booking_App.git
    cd EventBookingApp
    ```
 
@@ -112,7 +112,7 @@ src/
 
 For testing the app, you can use these demo credentials:
 
-**Email**: john@example.com  
+**Email**: john@example.com
 **Password**: password123
 
 Or create a new account using the sign-up screen.
