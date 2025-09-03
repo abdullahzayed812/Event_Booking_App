@@ -79,6 +79,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           <TextInput
             style={styles.input}
             placeholder="Full Name"
+            placeholderTextColor="#333"
             value={name}
             onChangeText={setName}
             autoCapitalize="words"
@@ -86,6 +87,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           <TextInput
             style={styles.input}
             placeholder="Email"
+            placeholderTextColor="#333"
             value={email}
             onChangeText={setEmail}
             keyboardType="email-address"
@@ -95,6 +97,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           <TextInput
             style={styles.input}
             placeholder="Password"
+            placeholderTextColor="#333"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
@@ -103,6 +106,7 @@ const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           <TextInput
             style={styles.input}
             placeholder="Confirm Password"
+            placeholderTextColor="#333"
             value={confirmPassword}
             onChangeText={setConfirmPassword}
             secureTextEntry
@@ -166,6 +170,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 16,
     backgroundColor: '#f9f9f9',
+    color: '#333',
   },
   button: {
     backgroundColor: '#007AFF',

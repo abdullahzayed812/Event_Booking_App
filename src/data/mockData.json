@@ -83,8 +83,8 @@
     {
       "id": "user1",
       "name": "john",
-      "email": "john@example.com",
-      "password": "password123"
+      "email": "john",
+      "password": "1234"
     },
     {
       "id": "user2",
